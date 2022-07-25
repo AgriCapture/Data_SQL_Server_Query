@@ -51,3 +51,6 @@ RIGHT TABLE WILL RETRIVE DATA FROM THE RIGHT TABLE AND ALL MATCHING RECORDS FROM
 
 Alter table[AgriCapture_GRASSLAND].[dbo].[GRAZING]
 add ID UNIQUEIDENTIFIER not null unique default(newid())
+
+
+test
