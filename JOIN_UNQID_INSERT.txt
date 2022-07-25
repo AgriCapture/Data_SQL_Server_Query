@@ -1,0 +1,52 @@
+---------------------//INSERT INTO//--------------------------------
+
+
+
+Select * from [dbo].[sep_fieldupd]
+Insert Into [dbo].[SEP_Farms_FIELDS] 
+([FIELD_ID],[admin_stat],[admin_coun],[STATE],[COUNTY],[OPERATOR_NAME],[FARM_NAME],[TRACT_NAME],[FIELD_NAME],[ORG_ID],[SOURCE],[CF_Practice],[Acreage])
+
+Select [FIELD_ID],[admin_stat],[admin_coun],[STATE],[COUNTY],[OPERATOR_NAME],[FARM_NAME],[TRACT_NAME],[FIELD_NAME],[ORG_ID],[SOURCE],[CF_Practice],[Acreage] from [dbo].[sep_fieldupd]
+
+
+
+select * from [dbo].[SEP_Farms_FIELDS]
+
+
+
+-----------------JOINS-------------------------------------------------
+
+
+SELECT  [Animal]   ###TABLE NAMES YOU WANT
+      ,[State]
+      ,[B0_l]
+      ,[VSl]
+      ,[Nexl]
+      ,[PEFENT_l]
+
+FROM [AgriCapture_GRASSLAND].[dbo].[GRAZING] as gz 
+INNER JOIN [AgriCapture_GRASSLAND].[dbo].[county_MLRA_key] as mk
+    ON (gz.STATE = mk.)
+
+GO
+
+/// EXPLINATION:
+SELECT (TABLE NAMES) FROM DATABASE.TABLE AS (NAME IT IN SHORT) (TYPE OF JOINT) NEW DATABASE YOU WANT TO JOIN.TABLE  AS( name in short)
+ON DATABASE.TABLE.COLUMN = DATABASE.TABLE.COLUMN
+
+
+INNER JOIN WILL REURN RECORD FROM THE TWO TABLES ON THE BASIS OF COMMON COLUMN NAME WITH COMMON RECORDS ONLY
+LEFT JOIN WILL RETRIVE RECORDES FROM THE LEFT TABLE AND THE MATCHING RECORDS ON THE RIGHT TABLE. MIGHT SHOW SOME TABLES NULL AS RECORD NOT BELONGING IN RIGHT TABLE.
+RIGHT TABLE WILL RETRIVE DATA FROM THE RIGHT TABLE AND ALL MATCHING RECORDS FROM THE LEFT TABLE. MIGHT SHOW SOME RECORDS NULL IF THE DONE MATCH IN LEFT TABLE BUT PRESENT IN RIGHT TABLE.
+
+
+
+
+
+---------------------------UNIQUE ID---------------------------
+
+
+
+
+Alter table[AgriCapture_GRASSLAND].[dbo].[GRAZING]
+add ID UNIQUEIDENTIFIER not null unique default(newid())
