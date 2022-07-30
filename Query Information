@@ -1,0 +1,2 @@
+*Create copy of the database*
+elect * into [dbo.GenInfColK] from [GeneralFieldInformation] 
