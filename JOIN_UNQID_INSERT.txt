@@ -53,4 +53,16 @@ Alter table[AgriCapture_GRASSLAND].[dbo].[GRAZING]
 add ID UNIQUEIDENTIFIER not null unique default(newid())
 
 
-This is edit..
+
+
+-------------------- UNIQUE ID PRIMARY KEY---------------------
+Alter table [AgriCapture_SEP].[dbo].[SEP_Crops2016]
+
+add Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID()
+
+
+
+
+
+
+-------------------------------
