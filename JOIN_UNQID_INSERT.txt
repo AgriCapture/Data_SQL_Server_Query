@@ -72,3 +72,7 @@ select
   concat(left(farm_name, 3), left(id_num, 5)) UserName
 from SEP_Farms_Fields$
 
+
+--------------ALTER TABLE TO CREATE NEW COLUMN------
+ALTER TABLE [AgriCapture_SEP].[dbo].[SEP_Farms_Fields$]
+ADD unq_id NVARCHAR(50) NULL ;
