@@ -60,9 +60,3 @@ Alter table [AgriCapture_SEP].[dbo].[SEP_Crops2016]
 
 add Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID()
 
-
-
-
-
-----------------------------------
--------------------------------
