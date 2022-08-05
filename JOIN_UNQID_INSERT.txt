@@ -60,3 +60,11 @@ Alter table [AgriCapture_SEP].[dbo].[SEP_Crops2016]
 
 add Id UNIQUEIDENTIFIER NOT NULL PRIMARY KEY DEFAULT NEWID()
 
+
+
+-----------------------AUTO INCREMENT ID--------------------------
+ALTER TABLE [AgriCapture_SEP].[dbo].[SEP_Farms_Fields$]
+add id_num int IDENTITY(10000,1)
+
+
+
