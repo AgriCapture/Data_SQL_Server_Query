@@ -67,4 +67,8 @@ ALTER TABLE [AgriCapture_SEP].[dbo].[SEP_Farms_Fields$]
 add id_num int IDENTITY(10000,1)
 
 
+---------------CONCAT ID WITH 3 LETTERS + ID TO GENERATE UNIQUE ID-----------
+select 
+  concat(left(farm_name, 3), left(id_num, 5)) UserName
+from SEP_Farms_Fields$
 
