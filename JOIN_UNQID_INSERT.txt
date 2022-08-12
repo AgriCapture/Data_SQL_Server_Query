@@ -71,6 +71,19 @@ add id_num int IDENTITY(10000,1)
 select 
   concat(left(farm_name, 3), left(id_num, 5)) UserName
 from SEP_Farms_Fields$
+---------------------------store in new column same table-----------------
+
+ with d as (
+    select concat(left(farm_name, 3), left(id_num, 5)) unq_iid
+from [AgriCapture_SEP].dbo.SEP_Farms_Fields$
+    
+    )
+
+update e set
+    e.unq_iid=d.unq_iid
+from d join [AgriCapture_SEP].[dbo].[SEP_Farms_Fields$] e on e.unq_iid=d.unq_iid
+
+
 
 
 --------------ALTER TABLE TO CREATE NEW COLUMN------
