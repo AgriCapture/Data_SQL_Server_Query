@@ -30,12 +30,12 @@ df_test.info
 df_test.isnull().sum()
 df_test
 
-#----for Crops------------
+----for Crops------------
 #unique crops
 print(df_test["Crops"].unique())
 
 
-#mapping correctly 
+#mapping 
 df_test['Crops'] = df_test['Crops'].map({'Cotton':'Cotton','Corn':'Corn','Winter weeds':'Winter weeds','Rice ':'Rice','SoyBean ':'SoyBean','Corn ':'Corn','Empty  ':'Empty'}).astype(str)
 print(df_test["Crops"].unique())
 
@@ -70,3 +70,7 @@ df_test
 #drop date begin
 df_test = df_test.drop(['DateBegin '], axis=1)
 df = df_test
+
+
+
+------------------CLASSIFICATION MODEL-----------
