@@ -1,6 +1,13 @@
 # Data Manipulation
 import pandas as pd
+import sklearn
 import numpy as np
+import matplotlib.pyplot as plt
+import os
+from sklearn.model_selection import train_test_split
+
+from sklearn.model_selection import GridSearchCV
+from sklearn import metrics
 
 # DataViz
 import seaborn as sns
@@ -23,5 +30,16 @@ df = pd.DataFrame(data=tips2, )
 #drop tables client, harvest date, end date
 df.drop(columns=['Client','Harvest Date']
 
+df_test= df.drop(columns=['Unnamed: 3'],axis=1)
 
-#vector encoding for crop and state
+
+----------------------------------------
+
+df = pd.read_csv('Smart_dataa.csv')
+print (df)
+df_test= df.drop(columns=['Unnamed: 3'],axis=1)
+print(df_test)
+
+cols = pd.get_dummies(df_test['STATE'], prefix= 'STATE')
+df_test[cols.columns] = cols
+df_test.drop('STATE', axis = 1, inplace = True)
