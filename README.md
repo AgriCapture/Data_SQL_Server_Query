@@ -7,5 +7,8 @@ contributor: AgriCapture Data Team
 AgriCapture Data Team: 
 Kun-Yuan Lee,
 Kurtis Eisenhuth, 
-Maithili Dupte, 
+Denis Hallvaxhiu,
 Xiaoge Zhang.
+
+Past contribution: 
+Maithili Dupte
