@@ -8,7 +8,8 @@ AgriCapture Data Team:
 Kun-Yuan Lee,
 Kurtis Eisenhuth, 
 Denis Hallvaxhiu,
-Xiaoge Zhang.
+Apruva Khanolkar
 
 Past contribution: 
 Maithili Dupte
+Xiaoge Zhang.
